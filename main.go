@@ -14,7 +14,6 @@ type Recipe struct {
 	PublishedAt  time.Time `json:"publishedAt"`
 }
 
-
 func main() {
 	router := gin.Default()
 	router.Run()
