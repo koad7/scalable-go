@@ -1,15 +1,21 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"time"
 
-func IndexHandler(c *gin.Context) {
-	c.JSON(200, gin.H{
-		"message": "hello world",
-	})
+	"github.com/gin-gonic/gin"
+)
+
+type Recipe struct {
+	Name         string    `json:"name"`
+	Tags         []string  `json:"tags"`
+	Ingredients  []string  `json:"ingredients"`
+	Instructions []string  `json:"instructions"`
+	PublishedAt  time.Time `json:"publishedAt"`
 }
+
 
 func main() {
 	router := gin.Default()
-	router.GET("/", IndexHandler)
 	router.Run()
 }
