@@ -90,6 +90,7 @@ func DeleteRecipeHandler(c *gin.Context) {
 		"message": "Recipe has been deleted"})
 }
 
+ 
 // GET SERACH
 func SearchRecipesHandler(c *gin.Context) {
 	tag := c.Query("tag")
@@ -108,6 +109,7 @@ func SearchRecipesHandler(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, listOfRecipes)
 }
+ 
 
 func main() {
 	router := gin.Default()
