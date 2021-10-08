@@ -192,6 +192,7 @@ func DeleteRecipeHandler(c *gin.Context) {
 		"message": "Recipe has been deleted"})
 }
 
+
 // swagger:operation GET /recipes/search recipes findRecipe
 // Search recipes based on tags
 // ---
@@ -223,6 +224,7 @@ func SearchRecipesHandler(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, listOfRecipes)
 }
+ 
 
 // swagger:operation GET /recipes/{id} recipes oneRecipe
 // Get one recipe
